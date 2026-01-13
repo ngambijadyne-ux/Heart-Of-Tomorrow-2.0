@@ -193,4 +193,39 @@ footer a:hover {
   align-self: center;
   cursor: pointer;
 }
+/* FORMSPARK FORM */
+.vertical-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.vertical-form label {
+  font-weight: 600;
+}
+
+.vertical-form input,
+.vertical-form textarea,
+.vertical-form select {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.vertical-form input:focus,
+.vertical-form textarea:focus,
+.vertical-form select:focus {
+  outline: none;
+  border-color: #7a43d6;
+}
+
+.vertical-form button {
+  margin-top: 1rem;
+  align-self: center;
+  cursor: pointer;
+}
+
 
