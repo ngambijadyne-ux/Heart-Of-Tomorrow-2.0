@@ -1,0 +1,189 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.btn-yellow { background:#ffeb3b; color:#000; }
+.btn-orange { background:#ff7a45; color:#fff; }
+.btn-blue { background:#4aa3df; color:#fff; }
+.btn-dark { background:#111; color:#fff; }
+.btn-outline { border:2px solid #fff; color:#fff; }
+
+/* ===== NAV ===== */
+.navbar {
+  background:#fff;
+  padding:15px 0;
+  position: sticky;
+  top:0;
+  z-index:1000;
+}
+
+.nav-content {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a {
+  margin-left:20px;
+  text-decoration:none;
+  color:#333;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height:80vh;
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-overlay {
+  background:rgba(0,0,0,0.45);
+  height:100%;
+}
+
+.hero-content {
+  color:#fff;
+  padding-top:120px;
+}
+
+.hero-buttons a {
+  margin-right:15px;
+}
+
+/* ===== FEATURED ===== */
+.featured {
+  padding:60px 0;
+}
+
+.featured-box {
+  background:#4aa3df;
+  color:#fff;
+  padding:40px;
+  border-radius:8px;
+}
+
+/* ===== SPLIT SECTIONS ===== */
+.split {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  padding:80px 0;
+}
+
+.split img {
+  width:100%;
+  border-radius:8px;
+}
+
+.reverse {
+  direction: rtl;
+}
+
+.reverse > * {
+  direction: ltr;
+}
+
+/* ===== PROGRAMS ===== */
+.programs {
+  background:#fffbdc;
+  padding:80px 0;
+}
+
+.program-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.program-card {
+  text-align:center;
+}
+
+/* ===== STORIES ===== */
+.story-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.story-card img {
+  width:100%;
+  border-radius:6px;
+}
+
+/* ===== SUBSCRIBE ===== */
+.subscribe {
+  background-size:cover;
+  background-position:center;
+}
+
+.subscribe .overlay {
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  padding:80px 20px;
+  text-align:center;
+}
+
+.subscribe-form {
+  max-width:700px;
+  margin:auto;
+  display:grid;
+  gap:15px;
+}
+
+/* ===== CTA ===== */
+.cta {
+  text-align:center;
+  padding:80px 20px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background:#4aa3df;
+  color:#fff;
+  padding:60px 0;
+}
+
+.footer-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .split {
+    grid-template-columns:1fr;
+  }
+
+  nav {
+    display:none;
+  }
+
+  .hero {
+    height:auto;
+  }
+}
