@@ -1,4 +1,6 @@
-/* RESET */
+/* =========================
+   GLOBAL RESET & BASE
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +14,9 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 header {
   background: #7a43d6;
 }
@@ -62,28 +66,32 @@ header {
   text-decoration: underline;
 }
 
-/* HERO */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
   background: linear-gradient(
       rgba(122, 67, 214, 0.85),
       rgba(122, 67, 214, 0.85)
-    ),
-    url("https://i.ibb.co/WpzqpF9t/food-drive-1.jpg") center/cover no-repeat;
+    );
   color: #fff;
   padding: 5rem 1rem;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: auto;
   margin-bottom: 2rem;
 }
 
+/* BUTTON */
 .btn {
   display: inline-block;
   background: #fff;
@@ -92,13 +100,16 @@ header {
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
+  transition: background 0.2s ease;
 }
 
 .btn:hover {
   background: #eee;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 .section {
   max-width: 1200px;
   margin: auto;
@@ -109,96 +120,60 @@ header {
   text-align: center;
   margin-bottom: 2.5rem;
   color: #7a43d6;
+  font-size: 2rem;
 }
 
-/* GRID / CARDS */
+/* =========================
+   GRID & CARDS
+========================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
 
 .card {
   background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  text-align: center;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE FIX (IMPORTANT) */
 .card img {
   width: 100%;
+  height: 220px;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 
-/* FOOTER */
-footer {
-  background: #2b1b4f;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
+/* CARD TEXT */
+.card h3 {
+  margin-bottom: 0.6rem;
+  color: #7a43d6;
 }
 
-footer a {
-  color: #d7c7ff;
-  text-decoration: none;
+.card p {
+  font-size: 0.95rem;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
-
-.socials {
-  margin-top: 1rem;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .nav ul {
-    justify-content: center;
-    margin-top: 1rem;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-}  /* FORMS */
-.form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.form input,
-.form select,
-.form textarea {
-  padding: 0.8rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-.form input:focus,
-.form select:focus,
-.form textarea:focus {
-  outline: none;
-  border-color: #7a43d6;
-}
-
-.form button {
-  align-self: center;
-  cursor: pointer;
-}
-/* FORMSPARK FORM */
+/* =========================
+   FORMS (FORMSPARK)
+========================= */
 .vertical-form {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  max-width: 500px;
+  gap: 0.9rem;
+  max-width: 520px;
   margin: auto;
 }
 
@@ -223,9 +198,49 @@ footer a:hover {
 }
 
 .vertical-form button {
-  margin-top: 1rem;
   align-self: center;
   cursor: pointer;
 }
 
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #2b1b4f;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
 
+footer a {
+  color: #d7c7ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.socials {
+  margin-top: 0.6rem;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 768px) {
+  .nav ul {
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+  }
+}
