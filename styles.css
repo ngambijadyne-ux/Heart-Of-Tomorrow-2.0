@@ -1,189 +1,120 @@
-/* ===== RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: system-ui, sans-serif;
-  line-height: 1.6;
-}
-
-.container {
+/* ================= GLOBAL ================= */
+.hot-container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
 
-/* ===== BUTTONS ===== */
-.btn {
-  padding: 12px 22px;
-  border-radius: 30px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 600;
-}
-
-.btn-yellow { background:#ffeb3b; color:#000; }
-.btn-orange { background:#ff7a45; color:#fff; }
-.btn-blue { background:#4aa3df; color:#fff; }
-.btn-dark { background:#111; color:#fff; }
-.btn-outline { border:2px solid #fff; color:#fff; }
-
-/* ===== NAV ===== */
-.navbar {
-  background:#fff;
-  padding:15px 0;
+/* ================= HEADER ================= */
+.hot-header {
+  background: #ffffff;
+  padding: 15px 0;
   position: sticky;
-  top:0;
-  z-index:1000;
+  top: 0;
+  z-index: 1000;
 }
 
-.nav-content {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-nav a {
-  margin-left:20px;
-  text-decoration:none;
-  color:#333;
+.logo img {
+  height: 48px;
 }
 
-/* ===== HERO ===== */
-.hero {
-  height:80vh;
-  background-size:cover;
-  background-position:center;
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.main-nav a.active {
+  color: #2da9e1;
+}
+
+.donate-btn {
+  background: #ff7a45;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 25px;
+}
+
+/* ================= HERO ================= */
+.hero-section {
+  height: 85vh;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
 }
 
 .hero-overlay {
-  background:rgba(0,0,0,0.45);
-  height:100%;
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .hero-content {
-  color:#fff;
-  padding-top:120px;
+  color: #fff;
+  max-width: 720px;
 }
 
-.hero-buttons a {
-  margin-right:15px;
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
-/* ===== FEATURED ===== */
-.featured {
-  padding:60px 0;
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 35px;
 }
 
-.featured-box {
-  background:#4aa3df;
-  color:#fff;
-  padding:40px;
-  border-radius:8px;
+/* ================= BUTTONS ================= */
+.hero-actions {
+  display: flex;
+  gap: 20px;
 }
 
-/* ===== SPLIT SECTIONS ===== */
-.split {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  padding:80px 0;
+.btn {
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 14px 30px;
+  display: inline-block;
 }
 
-.split img {
-  width:100%;
-  border-radius:8px;
+.primary-btn {
+  background: #fff35c;
+  color: #000;
 }
 
-.reverse {
-  direction: rtl;
+.secondary-btn {
+  background: #ff7a45;
+  color: #fff;
 }
 
-.reverse > * {
-  direction: ltr;
-}
-
-/* ===== PROGRAMS ===== */
-.programs {
-  background:#fffbdc;
-  padding:80px 0;
-}
-
-.program-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px;
-}
-
-.program-card {
-  text-align:center;
-}
-
-/* ===== STORIES ===== */
-.story-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-}
-
-.story-card img {
-  width:100%;
-  border-radius:6px;
-}
-
-/* ===== SUBSCRIBE ===== */
-.subscribe {
-  background-size:cover;
-  background-position:center;
-}
-
-.subscribe .overlay {
-  background:rgba(0,0,0,0.6);
-  color:#fff;
-  padding:80px 20px;
-  text-align:center;
-}
-
-.subscribe-form {
-  max-width:700px;
-  margin:auto;
-  display:grid;
-  gap:15px;
-}
-
-/* ===== CTA ===== */
-.cta {
-  text-align:center;
-  padding:80px 20px;
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  background:#4aa3df;
-  color:#fff;
-  padding:60px 0;
-}
-
-.footer-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:30px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-  .split {
-    grid-template-columns:1fr;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
   }
 
-  nav {
-    display:none;
+  .hero-content h1 {
+    font-size: 2.2rem;
   }
 
-  .hero {
-    height:auto;
+  .hero-section {
+    height: auto;
+    padding: 100px 0;
   }
 }
