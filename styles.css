@@ -165,3 +165,8 @@ footer a:hover {
     font-size: 2.2rem;
   }
 }
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
